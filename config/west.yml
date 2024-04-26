@@ -17,12 +17,16 @@ manifest:
       remote: urob
       revision: main
       import: app/west.yml
-    - name: zmk-keebit-keyboards
+    # Note: The following imports only shields definition files
+    - name: zmk-keyboards
       remote: keeb-it
       revision: main
     - name: zmk-rgbled-widget
       remote: caksoylar
       revision: main
+    - name: zmk-helpers
+      remote: urob
+      revision: v2 # this will eventually become main
     - name: cirque-input-module
       remote: petejohanson
       revision: main
