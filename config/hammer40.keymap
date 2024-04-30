@@ -11,6 +11,7 @@
 
 #include "hammer40_keylabels.h"
 #include "zmk-helpers/helper.h"
+#include "zmk-helpers/unicode-chars/currency.dtsi"
 
 /* Layers */
 #define DEF 0
@@ -20,6 +21,7 @@
 #define SYS 4
 
 #include "mouse.dtsi"
+#include "combos.dtsi"
 
 #define XXX &none
 #define ___ &trans
@@ -72,10 +74,6 @@ ZMK_TRI_STATE(swapper,
     bindings = <&kt LALT>, <&kp TAB>, <&kt LALT>;
     ignored-key-positions = <LT2>;
 )
-
-ZMK_COMBO(capsw, &caps_word, LM0 RM0)
-ZMK_COMBO(bootl, &bootloader, LT5 LT4 LT3)
-ZMK_COMBO(reset, &sys_reset, RT5 RT4 RT3)
 
 / {
     behaviors {
@@ -170,13 +168,13 @@ ZMK_LAYER(fn,
 
 ZMK_LAYER(num,
 //╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮             ╭─────────────┬─────────────┬─────────────┬─────────────┬─────────────┬─────────────╮
-    ___           ___           &kp N7        &kp N8        &kp N9        ___                         ___           &kp N9        &kp N8        &kp N7        ___           ___
+    ___       &curr_indian_rupee &kp N7        &kp N8        &kp N9        ___                         ___           &kp N9        &kp N8        &kp N7       &curr_indian_rupee  ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤             ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           &hml LGUI N0  &hml LALT N4  &hml LSHFT N5 &hml LCTRL N6 ___                         ___           &hml LCTRL N6 &hml LSHFT N5 &hml LALT N4  &hml LGUI N0  ___
+    ___           &hml LGUI N0   &hml LALT N4  &hml LSHFT N5 &hml LCTRL N6 ___                         ___           &hml LCTRL N6 &hml LSHFT N5 &hml LALT N4 &hml LGUI N0        ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤ ╭─────────╮ ├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           &kp N1        &kp N2        &kp N3        ___               ___       ___           &kp N3        &kp N2        &kp N1        ___           ___
+    ___           ___            &kp N1        &kp N2        &kp N3        ___              ___       ___           &kp N3        &kp N2        &kp N1        ___                 ___
 //├─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┼─────────────┤
-    ___           ___           ___           ___           ___           ___               ___       ___           ___           ___           ___           ___           ___
+    ___           ___           ___           ___           ___            ___              ___       ___           ___           ___           ___           ___                 ___
 //╰─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────┴─────────────╯ 
 )
 
