@@ -19,4 +19,12 @@
 ---
 include:
   - board: seeeduino_xiao_ble
-    shield: hammer40 rgbled_adapter 
+    shield: hammer40 rgbled_adapter
+  - board: nice_nano_v2
+    shield: hana_central_dongle
+  - board: seeeduino_xiao_ble
+    shield: hana_central_left rgbled_adapter
+  - board: seeeduino_xiao_ble
+    shield: hana_peripheral_left rgbled_adapter
+  - board: seeeduino_xiao_ble
+    shield: hana_peripheral_right rgbled_adapter
